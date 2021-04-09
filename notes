@@ -1,0 +1,14 @@
+Models: 
+  Users
+   has_many :facts
+     :name :username :password
+
+  Fact
+   belongs_to :user
+    :user_id - integer, :subject -string, :rating -string 
+
+  Comment
+   belongs_to :user, through: :fact
+     :content -string
+
+
